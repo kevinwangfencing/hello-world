@@ -1,0 +1,27 @@
+# Environmental Issue Design Challenge
+
+from tkinter import messagebox
+import threading
+
+def gfg():
+    print("It's time for a break")
+    MsgBox = messagebox.askquestion ('Give your eyes a break?',
+         'It is time for yours eyes to get a break')
+
+    # Can input info of glasses & screen
+    if MsgBox == 'yes':
+        # Can be given personal information/condition here~
+        # Posture/distance/angle
+        messagebox.showinfo("Good job", "Your eyes is now recover! ")
+    else:
+        # Warning
+        # Can be given personal information/condition here~
+        # Posture/distance/angle
+        messagebox.showinfo("Warning!!", "skipping eyes resting may cause you gaining fat!!")
+
+# Timer starts
+timer = threading.Timer(3.0,gfg)
+timer.start()
+
+# Can introduce and recommand the 20-20-20 rule here
+print("you have started the eyes check timer")
